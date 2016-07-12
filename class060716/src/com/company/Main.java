@@ -46,12 +46,25 @@ public class Main {
 
     }
 
+    //homework4
+
+    public static int remainder (int x, int y){
+
+        int i;
+        for (i=y; y <= x ; i=i+y) {
+        }
+        return (x-y);
+        }
+
+    }
+
 
     public static void main (String[] args){
 
         System.out.println(distance1 (8,3));
         System.out.println(multyply (2,30));
         System.out.println(devide (42,84));
+        System.out.println(remainder (4,9));
     }
 
  }

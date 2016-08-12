@@ -26,6 +26,32 @@ public class Main {
         }
         return maxSoFar;
     }
+    public static int partition (int [] arr, int law, int high){
+        int pivot = arr[high];
+        int i=law-1;
+        for (int j = law; j <high; j++) {
+            if (arr[j]<=pivot){
+                int temp = arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+            }
+        int temp=arr[i+1];
+        arr [i+1]=arr[high];
+        arr[high]=temp;
+        return i+1;
+
+    }
+    public static void quicksort (int [] arr, int law, int high){
+        if (law<high){
+            int p=partition(arr, law, high);
+            quicksort(arr,law,p-1);
+            quicksort(arr,p+1,high);
+        }
+
+    }
+
+
     public static void main(String[] args) {
 	int[] nums ={-1,4,-1,3,-3};
         System.out.println(maxsubarray(nums));

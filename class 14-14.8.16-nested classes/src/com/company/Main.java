@@ -10,5 +10,10 @@ public class Main {
         - anonymous class
 
     */
+
+	MyClass.myStaticNestedClass myStaticNestedClass=
+            new MyClass.myStaticNestedClass();
     }
+    MyClass myClass = new MyClass();
+    MyClass.MyInnerClass myInnerClass=myClass.new MyInnerClass();
 }
